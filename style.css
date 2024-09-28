@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'MyLocalFont';
+    src: url('fonts/MyLocalFont.woff2')format('woff2');
+}
+*{
+    
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+}
+
+:root{
+    --main-color: #fa5353;
+    --dark-color: #1b182b;
+    --light-color: #322f40;
+    --text-color: white;
+}
+::selection{
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+.ads{
+    position: fixed;
+    top: 200px;
+    right: 0;
+    width: 200px;
+    height: 420px;
+    background-color: white ;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    z-index: 999;
+    border-radius: 5px;
+}
+.ads h3{
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.ad-content{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-content video{
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
+
+.ad-content{
+    font-size: 14px;
+    color: #555
+    ;
+}
+
+.home-text h1{
+    font-family: 'MyLocalFont', pricedown; 
+}
+section{
+    padding: 4rem 0 3rem;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+    background: var(--dark-color);
+}
+.container{
+    
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    z-index: 100;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+}
+
+.logo span {
+    color: #fa5353;
+}
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.nav-icons .bx {
+    font-size: 20px;
+    height: 44px; 
+    width: 44px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    background: #21232b;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #bell-icon{
+    position: relative;
+  }
+#bell-icon span{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--main-color);
+    position: absolute;
+    top: 10px;
+    right: 14px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: #21232b;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+.menu-icon div{
+    display: block;
+    background-color: var(--text-color);
+    height: 2px;
+    width: 25px;
+    transition:0.3s;
+}
+
+.move .line1{
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.move .line2{
+    opacity: 0;
+}
+.move .line3{
+    transform: rotate(45deg) translate(-5px,-5px);
+}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,14,0.9);
+    z-index: 106;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+    clip-path: circle(0% at 100% 0%);
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu.active{
+    clip-path: circle(144% at 100% 0%);
+}
+.menu img{
+    display: block;
+    margin: 0;
+    width: autopx;
+
+}
+ .navbar{
+    display: grid;
+    row-gap: 1rem;
+    text-align: right;
+    padding-right:2rem;
+} 
+.navbar a{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.2sS;
+}
+.navbar a:hover{
+    border-bottom: 4px solid var(--main-color);
+    font-size: 1.8rem;
+}
+.notification{
+    position: absolute;
+    top: 110%;
+    right: 5rem;
+    background: var(--light-color);
+    width: 300px;
+    height: 350px;
+    border-radius: 0.5rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    clip-path: circle(0% at 100% 0%);
+    
+}
+.notification.active{
+    clip-path: circle(144% at 100% 0);
+    transition: 0.3s;
+}
+
+.notification-box{
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+    border-radius: 0.5rem;
+    background: var(--dark-color);
+    padding: 10px;
+}  
+
+.notification-box .bx{
+    color:#faf102
+}
+.box-color{
+    background: hsl(0, 0%, 100%, 0.4);
+}
+.box-color .bx{
+    color: var(--main-color);
+}
+
+.home{
+    position: relative;
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5rem;
+
+}
+
+.home img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.4rem;
+    z-index: -1;
+}
+.home-text{
+    padding-right: 4rem;
+    text-align: right;
+}
+.home-text h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+
+}
+
+.btn{
+    background: var(--main-color);
+    padding: 15px 20px;
+    column-rule-color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 2rem;
+}
+.btn:hover{
+    background: var(--light-color);
+    transition: 0.3s all linear;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.heading .bx{
+    font-size: 21px;
+    color: var(--text-color);
+    background: var(--main-color);
+    padding: 10px;
+    border-radius: 5rem;
+}
+
+.heading h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+section .container{
+display: flex; 
+  overflow-x: auto; 
+  padding: 20px;
+  gap: 20px;
+}
+
+.game-card {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  width: 180px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+.game-card img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.game-card p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.game-card {
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+.game-details {
+    display: none;
+    margin-top: 20px;
+}
+
+.game-box{
+    border: 1px solid; 
+    padding: 10px;
+    background-color: var(--dark-color);
+    border-radius: 0.5rem;
+    position: relative;
+}
+.close-button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+     top: 10px; 
+     right: 10px; 
+    cursor: pointer;
+}
+
+.close-button:hover{
+    color: red;
+}
+
+.download-btn {
+    background: var(--light-color);
+    border: none;
+    color: var(--main-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+
+.download-btn:hover{
+    background-color: white;
+}
+
+footer{
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-section{
+    margin-bottom: 20px;
+}
+
+.footer-section{
+    margin:10px 0px;
+}
+
+.footer-section a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+.footer-section a:hover{
+    text-decoration: underline;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+
+
+.reviews {
+    margin-top: 50px;
+    background-color: var(--dark-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form input, .review-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+.rating{
+    display: flex;
+    justify-content: center;
+}
+.rating img{
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.rating img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    color: gold;
+}
+
+#review-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.container3{
+    max-width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+.game-list {
+    position: absolute;
+    top: 200px; 
+    left: 20px; 
+    width: 180px; 
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100; 
+}
+
+.game-list h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.game-list ul {
+    padding: 0;
+}
+
+.game-list li {
+    margin: 10px 0;
+}
+
+.game-list a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.game-list a:hover {
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+section .container2{
+    margin-top: 0;
+}
+/* resize */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .game-card {
+        width: 150px; 
+    }
+
+    .home-text h1 {
+        font-size: 2rem; 
+    }
+}
+
+@media (max-width: 992px) {
+    .ads {
+        width: 150px; 
+        height: auto; 
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 1.4rem; 
+    }
+
+    .home-text {
+        padding-right: 2rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon, .nav-icons .bx {
+        height: 36px;
+        width: 36px; 
+    }
+
+    .home-text {
+        padding-right: 1rem; 
+    }
+
+    .game-card {
+        width: 130px; 
+    }
+
+    .btn {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .home-text h1 {
+        font-size: 1.5rem; 
+    }
+
+    .game-card {
+        height: auto; 
+    }
+
+    .notification {
+        width: 90%; 
+        height: auto; 
+    }
+
+    .navbar a {
+        font-size: 1.2rem; 
+    }
+
+    .ads {
+        top: 200px; 
+    }
+}
+

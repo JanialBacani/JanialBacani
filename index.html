@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut-icon" href="img/logo.png" type="img/x-icon">
+    
+    <!--Sir pwede to? 
+    icons sir, icons?-->>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">WIB<span>SAYT</span></a>
+            <div class="nav-icons">
+                <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
+                <i class='bx bx-cloud-download'></i>
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+             <div class="menu">
+                <div class="navbar">
+                    <li><a href="#index.html">Home</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    
+                </div>
+             </div>
+
+
+             <!-- notif -->
+              <div class="notification">
+                <div class="notification-box">
+                    <i class="'bx bxs-check-circle"></i>
+                    <p>Na download na par</p>
+                </div>
+                <div class="notification-box box-color">
+                    <i class="'bx bxs-x-circle"></i>
+                    <p>Madi par madi madi madi</p>
+                </div>
+                    
+                </div>
+              </div>
+        
+    </header>
+
+    <div class="game-list">
+        <h3>Game List</h3>
+        <ul>
+            <li><a href="#gta">GTA V</a></li>
+            <li><a href="#valorant">Valorant</a></li>
+            <li><a href="#genshin">Genshin Impact</a></li>
+            <li><a href="#wuthering">Wuthering Waves</a></li>
+            <li><a href="#minecraft">Minecraft</a></li>
+            <li><a href="#pubg">Pubg</a></li>
+            <li><a href="#ml">Mobile Legends Bang2x</a></li>
+            <li><a href="#cod">COD: Warzone</a></li>
+            <li><a href="#farlight">Farligh 84</a></li>
+           
+            
+        </ul>
+    </div>
+  
+<!--Advertisement-->
+    <!-- <section class="video-ad">
+        <h2>Not Sponsored Ad</h2>
+        <video width="240px" height="160px" controls autoplay muted>
+            <source src="img/VALORANT Animated AD (OFFICIAL).mp4" type="video/mp4">
+        </video>
+    </section> -->
+
+    <div class="ads">
+        <h3>NOT Sponsored Ads</h3>
+
+        <div class="ad-content">
+            <a href="https://www.rockstargames.com/V/" target="_blank">
+                <button class="close-button" onclick="ads()">x</button>
+                <!-- <img src="img/trevor.jpg" alt="Ad 1"> -->
+                <video width="140px" height="60px" controls autoplay muted></video>
+                <p>Buy GTA V now at a discounted price!</p>
+            </a>
+        </div>
+
+      
+        <div class="ad-content">
+            <a href="https://playvalorant.com/en-sg/" target="_blank">
+                <img src="img/valoo.png" alt="Ad 2">
+                <p>Valorant Battle Pass: Available Now!</p>
+            </a>
+        </div>
+        </div> 
+
+    <!--banner-->
+    <section class="home container" id="home">
+        <img src="img/gta6.1.jpg" alt="GTA IV">
+        <div class="home-text">
+            <h1>Grand <br> Theft <br> Auto VI</h1>
+            <a href="#" class="btn">Available Now</a>
+        </div>
+    </section>
+    
+    <!--Yan yung  parang apoy haha-->
+    <section class="trending container" id="trending">
+        <div class="heading">
+            <i class='bx bxs-flame'></i>
+            <h2>Games</h2>
+        </div>
+
+        <!--Game-->
+        <div class="container1">
+            <div class="game-card" onclick="showDetails('gta')">
+                <img src="img/trending5.png" alt="GTA V">
+                <p>GTA V</p>
+                <p>Action></p>
+                <p>Price: ₱800.99</p>
+                <button class="download-btn">Download</button>
+                
+                
+            </div>
+
+            <div class="game-card" onclick="showDetails('valorant')">
+                <img src="img/valorant1.jpg" alt="Valorant">
+                <p>Valorant</p>
+                <p>FPS</p>
+                <p>Price: ₱2500</p>
+                <button class="download-btn">Download</button>
+               
+            </div>
+
+            <div class="game-card" onclick="showDetails('genshin')">
+                <img src="img/genshit.jpg" alt="Genshin Impact">
+                <p>Genshin Impact</p>
+                <p>Adventure</p>
+                <p>Price: ₱594</p>
+                <button class="download-btn">Download</button>
+            </div>
+
+            <div class="game-card" onclick="showDetails('wuthering')">
+                <img src="img/wuwa1.jpg" alt="Wuthering Waves">
+                <p>Wuthering </p>
+                <p>Adventure</p>
+                <p>Price: ₱5556</p>
+                <button class="download-btn">Download</button>
+            </div>
+
+            <div class="game-card" onclick="showDetails('farcry')">
+                <img src="img/farcry.png" alt="Far Cry 4">
+                <p>Far Cry 4</p>
+                <p>Shooting</p>
+                <p>Price: ₱656</p>
+                <button class="download-btn">Download</button>
+            </div>
+        </div>
+        </div>
+        <!-- Game details section -->
+        <div id="game-details" class="game-details game-box">
+            <button class="close-button" onclick="closeGameBox()">x</button>
+            <h1 id="game-title"></h1>
+            <p id="game-genre"></p>
+            <p id="game-description"></p>
+            <button class="download-btn">Download</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="container2">
+            <div class="game-card" onclick="showDetails('minecraft')">
+                <img src="img/new5.png" alt="minecraft">
+                <p>Minecraft</p>
+                <p>Adventure</p>
+                <price>Price: ₱1500</price>
+                <button class="download-btn">Download</button>
+            </div>
+
+            <div class="game-card" onclick="showDetails('pubg')">
+                <img src="img/new6.png" alt="pubg">
+                <p>Pubg</p>
+                <p>Shooting</p>
+                <price>Price: ₱1500</price>
+                <button class="download-btn">Download</button>
+            </div>
+
+            <div class="game-card" onclick="showDetails('ml')">
+                <img src="img/ml.jpg" alt="mobile legends">
+                <p>Mobile Legends </p>
+                <p>MOBA</p>
+                <price>Price: ₱1500</price>
+                <button class="download-btn">Download</button>
+
+            </div>
+            <div class="game-card" onclick="showDetails('cod')">
+                <img src="img/cod.jpg" alt="cod">
+                <p>Warzone</p>
+                <p>Shooting</p>
+                <price>Price: ₱1500</price>
+                <button class="download-btn">Download</button>
+
+            </div>
+            <div class="game-card" onclick="showDetails('farlight')">
+                <img src="img/fl.jpg" alt="farlight">
+                <p>Farlight  84</p>
+                <p>Shooting</p>
+                <price>Price: ₱1500</price>
+                <button class="download-btn">Download</button>
+
+            </div>
+            <div id="game-details" class="game-details game-box">
+                <button class="close-button" onclick="closeGameBox()">X</button>
+                <h1 id="game-title"></h1>
+                <p id="game-genre"></p>
+                <p id="game-description"></p>
+            </div>
+            
+        </div>
+    </section>
+<hr>
+
+
+<!--Footer as usual-->
+    <footer>
+        <div class="footer-section">
+            <h3>Follow me on socials</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/clrshainaaa">Facebook</a></li>
+                <li><a href="https://www.instagram.com/jnxptz/">Instagram</a></li>
+            </ul>
+        </div>
+
+
+        <!--Review? sa exam? huwag naaaaaa-->
+        <section class="reviews container3" id="reviews">
+            <h2>User Reviews</h2>
+            <div class="review-form">
+                <input type="text" id="username" placeholder="Your name">
+                <textarea id="review-text" placeholder="Write your review..."></textarea>
+                <div class="rating">
+                    <img class="star" src="img/star-regular-24.png" data-value="1" onclick="selectRating(1)">
+                    <img class="star" src="img/star-regular-24.png" data-value="2" onclick="selectRating(2)">
+                    <img class="star" src="img/star-regular-24.png" data-value="3" onclick="selectRating(3)">
+                    <img class="star" src="img/star-regular-24.png" data-value="4" onclick="selectRating(4)">
+                    <img class="star" src="img/star-regular-24.png" data-value="5" onclick="selectRating(5)">
+                </div>
+                <div class="rating">
+                    <img class="star" src="img/star-filled-24.png" data-value="1" onclick="selectRating(1)">
+                    <img class="star" src="img/star-filled-24.png" data-value="2" onclick="selectRating(2)">
+                    <img class="star" src="img/star-filled-24.png" data-value="3" onclick="selectRating(3)">
+                    <img class="star" src="img/star-regular-24.png" data-value="4" onclick="selectRating(4)">
+                    <img class="star" src="img/star-regular-24.png" data-value="5" onclick="selectRating(5)">
+                </div>
+                
+                <button onclick="submitReview()">Submit review</button>
+            </div>
+            <div id="review-list">
+              
+            </div>
+        </section>
+    </footer>
+   
+   
+<script src="script.js"></script>
+
+
+</body>
+</html>
